@@ -13,7 +13,17 @@ return [
     // +----------------------------------------------------------------------
     // | 应用设置
     // +----------------------------------------------------------------------
-
+    // 1数据库连接dsn配置
+    'dsn_db_config01'   =>  'mysql://user_dsn_str:pwd_dsn_str@127.0.0.1:3306/tp5_model#utf8',
+    'dsn_db_config02'   =>  [
+        'type'  =>  'mysql',
+        'hostname'        => 'localhost',
+        'database'  =>  'tp5_model',
+        'username'  =>  'user_dsn_arr',
+        'password'  =>  'pwd_dsn_arr',
+        'prefix'   =>  'tp5_',
+        'hostport'  =>  '3306',
+    ],
     // 应用命名空间
     'app_namespace'          => 'app',
     // 应用调试模式
