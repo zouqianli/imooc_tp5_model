@@ -5,7 +5,8 @@ class Index
 {
     public function index()
     {
-        $this->mode_setFiledAttr();
+        $this->mode_setFiledAttr();// 添加
+        $this->model_update(); // 更新
     }
 
     /**
@@ -23,5 +24,12 @@ class Index
             'mygroup'   =>  1,
             'num'   =>  10,
         ]);
+    }
+
+    public function model_update()
+    {
+        $user = User::get(30);
+        $user->name = '更新时间了哦';
+        $user->save();
     }
 }
