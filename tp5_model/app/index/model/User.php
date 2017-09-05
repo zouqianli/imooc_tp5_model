@@ -10,4 +10,16 @@ use think\Model;
 class User extends Model
 {
 
+    public function getSexAttr($val)
+    {
+        //dump($val);
+        switch ($val){
+            case 0:
+                return '男';
+            case 1:
+                return '女';
+            case 2:
+                return '保密';
+        }
+    }
 }
