@@ -14,6 +14,10 @@ class Index
      * 'auto_timestamp'  => true,
      * 添加一条记录
      * INSERT INTO `tp5_user` (`name` , `password` , `create_time` , `update_time`) VALUES ('时间戳' , 'e10adc3949ba59abbe56e057f20f883e' , 1504671179 , 1504671179)
+     *
+     * 2.在模型类中添加保护属性protected $AutoWriteTimestamp = true;
+     *  INSERT INTO `tp5_user` (`name` , `password` , `create_time` , `update_time`) VALUES ('时间戳' , 'e10adc3949ba59abbe56e057f20f883e' , 1504671731 , 1504671731)
+     *
      */
     public function model_create()
     {
@@ -22,5 +26,6 @@ class Index
             'password'  =>  md5('123456'),
             // 没有显示添加时间戳字段
         ]);
+        dump($res);
     }
 }
