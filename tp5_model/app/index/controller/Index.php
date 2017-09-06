@@ -23,6 +23,13 @@ class Index
      * protected $createTime = 'create_at';
      * protected $updateTime = 'update_at';
      * INSERT INTO `tp5_user` (`name` , `password` , `create_at` , `update_at`) VALUES ('时间戳' , 'e10adc3949ba59abbe56e057f20f883e' , 1504672339 , 1504672339)
+     *
+     * 4.关闭部分自动写入添加|更新时间,模型类中设置
+     * protected $autoWriteTimestamp = true;
+     * protected $createTime = false;//不关心
+     * protected $updateTime = 'update_at';
+     * INSERT INTO `tp5_user` (`name` , `password` , `update_at`) VALUES ('时间戳' , 'e10adc3949ba59abbe56e057f20f883e' , 1504672577)
+     *
      */
     public function model_create()
     {
